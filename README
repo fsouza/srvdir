@@ -1,0 +1,30 @@
+Simple static files server, similar to Python's SimpleHTTPServer, but faster.
+
+Some very basic ab statistics:
+
+Python's SimpleHTTPServer:
+
+    % ab -c 10 -n 5000 http://localhost:8000/post.html
+    ...
+    Requests per second:    1168.66 [#/sec] (mean)
+    Time per request:       8.557 [ms] (mean)
+    Time per request:       0.856 [ms] (mean, across all concurrent requests)
+    Transfer rate:          5419.88 [Kbytes/sec] received
+
+srvdir:
+
+    % ab -c 10 -n 5000 http://localhost:9090/post.html
+    ...
+    Requests per second:    4095.31 [#/sec] (mean)
+    Time per request:       2.442 [ms] (mean)
+    Time per request:       0.244 [ms] (mean, across all concurrent requests)
+    Transfer rate:          18992.80 [Kbytes/sec] received
+
+Use this for development only! nginx stats:
+
+    % ab -c 10 -n 5000 http://localhost:8080/post.html
+    ...
+    Requests per second:    8933.09 [#/sec] (mean)
+    Time per request:       1.119 [ms] (mean)
+    Time per request:       0.112 [ms] (mean, across all concurrent requests)
+    Transfer rate:          41647.02 [Kbytes/sec] received
