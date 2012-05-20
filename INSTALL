@@ -1,0 +1,22 @@
+Install instructions
+
+From source
+
+To install srvdir from source, you need to have Go (http://golang.org)
+installed, and run from terminal:
+
+    % go get github.com/fsouza/srvdir
+
+Make sure $GOPATH/bin is your path.
+
+Binary distributions
+
+srvdir is also distributed in binary format:
+
+    darwin:
+        amd64: https://github.com/downloads/fsouza/srvdir/srvdir_darwin_amd64.tar.gz
+        386: https://github.com/downloads/fsouza/srvdir/srvdir_darwin_386.tar.gz
+
+    linux:
+        amd64: https://github.com/downloads/fsouza/srvdir/srvdir_linux_amd64.tar.gz
+        386: https://github.com/downloads/fsouza/srvdir/srvdir_linux_386.tar.gz
