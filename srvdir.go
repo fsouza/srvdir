@@ -1,4 +1,4 @@
-// Copyright (c) 2012, Francisco Souza
+// Copyright (c) 2013, Francisco Souza
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -27,6 +27,7 @@ package main
 
 import (
 	"flag"
+	"log"
 	"net/http"
 )
 
@@ -39,7 +40,8 @@ func init() {
 func main() {
 	flag.Parse()
 	http.Handle("/", http.FileServer(http.Dir("")))
+	log.Printf("Running at http://127.0.0.1%s", port)
 	if err := http.ListenAndServe(port, nil); err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 }
